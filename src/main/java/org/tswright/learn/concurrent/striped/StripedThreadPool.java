@@ -11,10 +11,10 @@ import java.util.concurrent.TimeUnit;
  */
 public interface StripedThreadPool<K>
 {
-   boolean isShutdown();
-   boolean isTerminated();
-   void shutdown();
-   boolean awaitTermination( long timeout, TimeUnit unit ) throws InterruptedException;
-   List<Runnable> shutdownNow();
+	boolean isShutdown();
+	boolean isTerminated();
+	void shutdown();
+	boolean awaitTermination( long timeout, TimeUnit unit ) throws InterruptedException;
+	List<Runnable> shutdownNow();
 	CompletableFuture<Void> dispatch( K key, Runnable task );
 }
