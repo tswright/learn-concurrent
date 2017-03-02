@@ -44,7 +44,7 @@ class OrderProducer extends Thread
 		}
 		catch ( InterruptedException | BrokenBarrierException e )
 		{
-			e.printStackTrace();
+			logger.error( "failed to finish order simulation", e );
 		}
 	}
 
